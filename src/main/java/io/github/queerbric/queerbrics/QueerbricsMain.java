@@ -14,6 +14,6 @@ public class QueerbricsMain implements ModInitializer {
 	
 	@Override
 	public void onInitialize() {
-		QueerbricsItems.registerAll();
+		QueerbricsItems.init();
 	}
 }

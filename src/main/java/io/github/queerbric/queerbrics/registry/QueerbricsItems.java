@@ -25,7 +25,7 @@ public class QueerbricsItems {
 			lesbianBrick, // Lesbian Pride
 			anarchyBrick; // Anarchist Pride
 	
-	public static void registerAll() {
+	public static void init() {
 		blackBrick = registerItem("black_brick", new QueerBrickItem());
 		whiteBrick = registerItem("white_brick", new QueerBrickItem());
 		darkGreyBrick = registerItem("dark_grey_brick", new QueerBrickItem());
