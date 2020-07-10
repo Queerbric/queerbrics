@@ -1,0 +1,28 @@
+{
+	"item.queerbrics.black_brick" : "Black Brick",
+	"item.queerbrics.white_brick" : "White Brick",
+	"item.queerbrics.light_grey_brick" : "Light Gray Brick",
+	"item.queerbrics.dark_grey_brick" : "Gray Brick",
+	"item.queerbrics.dark_blue_brick" : "Blue Brick",
+	"item.queerbrics.light_blue_brick" : "Light Blue Brick",
+	"item.queerbrics.dark_purple_brick" : "Purple Brick",
+	"item.queerbrics.light_purple_brick" : "Magenta Brick",
+	"item.queerbrics.dark_green_brick" : "Green Brick",
+	"item.queerbrics.light_green_brick" : "Lime Brick",
+	"item.queerbrics.dark_red_brick" : "Red Brick",
+	"item.queerbrics.light_red_brick" : "Pink Brick",
+	"item.queerbrics.orange_brick" : "Orange Brick",
+	"item.queerbrics.cyan_brick" : "Cyan Brick",
+	"item.queerbrics.brown_brick" : "Brown Brick",
+	"item.queerbrics.yellow_brick" : "Yellow Brick",
+	
+	"item.queerbrics.ace_brick" : "Ace Pride Brick",
+	"item.queerbrics.anarchy_brick" : "Anarchy Pride Brick",
+	"item.queerbrics.bi_brick" : "Bi Pride Brick",
+	"item.queerbrics.enby_brick" : "Non-binary Pride Brick",
+	"item.queerbrics.gay_brick" : "Gay Pride Brick",
+	"item.queerbrics.lesbian_brick" : "Lesbian Pride Brick",
+	"item.queerbrics.pan_brick" : "Pan Pride Brick",
+	"item.queerbrics.rainbow_brick" : "Rainbow Brick",
+	"item.queerbrics.trans_brick" : "Trans Pride Brick"
+}
