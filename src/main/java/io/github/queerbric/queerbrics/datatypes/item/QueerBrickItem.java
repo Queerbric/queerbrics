@@ -16,18 +16,18 @@ public class QueerBrickItem extends SnowballItem {
 	public QueerBrickItem() {
 		super(new Item.Settings().group(ItemGroup.MISC));
 	}
-	
+
 	@Override
 	public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
 		ItemStack itemStack = user.getStackInHand(hand);
 		world.playSound((PlayerEntity)null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_SNOWBALL_THROW, SoundCategory.NEUTRAL, 0.5F, 0.4F / (RANDOM.nextFloat() * 0.4F + 0.8F));
 		if (!world.isClient) {
-			ThrowableBrickEntity throwableBrickEntity = new ThrowableBrickEntity(world, user, this);
+			ThrowableBrickEntity throwableBrickEntity = new ThrowableBrickEntity(world, user);
 			throwableBrickEntity.setItem(itemStack);
 			throwableBrickEntity.setProperties(user, user.pitch, user.yaw, 0.0F, 1.5F, 1.0F);
 			world.spawnEntity(throwableBrickEntity);
 		}
-		
+
 		return TypedActionResult.method_29237(itemStack, world.isClient());
 	}
 }

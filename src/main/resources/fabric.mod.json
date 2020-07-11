@@ -19,6 +19,9 @@
   "entrypoints": {
     "main": [
       "io.github.queerbric.queerbrics.QueerbricsMain"
+    ],
+    "client": [
+      "io.github.queerbric.queerbrics.QueerbricsClient"
     ]
   },
   "mixins": [
