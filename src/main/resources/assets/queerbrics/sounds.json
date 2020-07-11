@@ -1,0 +1,17 @@
+{
+	"brick.hit.living": {
+		"sounds": [
+			{
+				"name": "queerbrics:brick-hit-living",
+				"volume": 0.8
+			}
+		],
+		"subtitle": "sound.queerbrics.brick.hit.living"
+	},
+	"brick.throw": {
+		"sounds": [
+			"queerbrics:brick-throw"
+		],
+		"subtitle": "sound.queerbrics.brick.throw"
+	}
+}
