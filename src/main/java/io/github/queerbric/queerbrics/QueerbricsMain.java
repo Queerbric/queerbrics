@@ -1,8 +1,12 @@
 package io.github.queerbric.queerbrics;
 
+import io.github.queerbric.queerbrics.datatypes.entity.ThrowableBrickEntity;
+import io.github.queerbric.queerbrics.registry.QueerbricsEntityTypes;
 import io.github.queerbric.queerbrics.registry.QueerbricsItems;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 
 public class QueerbricsMain implements ModInitializer {
 	public static String modid = "queerbrics";
@@ -14,6 +18,7 @@ public class QueerbricsMain implements ModInitializer {
 	
 	@Override
 	public void onInitialize() {
+		QueerbricsEntityTypes.init();
 		QueerbricsItems.init();
 	}
 }

@@ -1,5 +1,6 @@
 package io.github.queerbric.queerbrics.datatypes.entity;
 
+import io.github.queerbric.queerbrics.registry.QueerbricsEntityTypes;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -13,8 +14,13 @@ import net.minecraft.world.World;
 public class ThrowableBrickEntity extends ThrownItemEntity {
 	private final Item type;
 	
+	public ThrowableBrickEntity(EntityType<? extends ThrowableBrickEntity> entityType, World world) {
+		super(entityType, world);
+		this.type = null;
+	}
+	
 	public ThrowableBrickEntity(World world, LivingEntity owner, Item type) {
-		super(EntityType.SNOWBALL, owner, world);
+		super(QueerbricsEntityTypes.throwableBrick, owner, world);
 		this.type = type;
 	}
 	
@@ -31,7 +37,7 @@ public class ThrowableBrickEntity extends ThrownItemEntity {
 				(float) Math.sqrt((
 								getVelocity().x * getVelocity().x +
 								getVelocity().y * getVelocity().y +
-								getVelocity().z * getVelocity().z)) % 20 / 2);
+								getVelocity().z * getVelocity().z)));
 	}
 	
 	@Override
