@@ -20,7 +20,7 @@ Groups:
 * Trans Pride
 * Pan Pride
 * Gay Pride
-* Non-binary Pride
+* Non-Binary Pride
 * Bi Pride
 * Lesbian Pride
 * Ancom Pride
