@@ -27,3 +27,6 @@ bin/
 # fabric
 
 run/
+
+# assets
+assets-work/*.RPP-bak
