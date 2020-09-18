@@ -4,6 +4,7 @@
   "package": "io.github.queerbric.queerbrics.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "ItemMixin"
   ],
   "client": [
     "ClientPlayNetworkHandlerMixin"
