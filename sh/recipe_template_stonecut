@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:@COLOR_terracotta"
+  },
+  "result": "queerbrics:@COLOR_brick",
+  "count": 4
+}

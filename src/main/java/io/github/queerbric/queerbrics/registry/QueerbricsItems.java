@@ -28,16 +28,16 @@ public class QueerbricsItems {
 	public static void init() {
 		blackBrick = registerItem("black_brick", new QueerBrickItem());
 		whiteBrick = registerItem("white_brick", new QueerBrickItem());
-		darkGreyBrick = registerItem("dark_grey_brick", new QueerBrickItem());
-		lightGreyBrick = registerItem("light_grey_brick", new QueerBrickItem());
-		darkBlueBrick = registerItem("dark_blue_brick", new QueerBrickItem());
+		darkGreyBrick = registerItem("gray_brick", new QueerBrickItem());
+		lightGreyBrick = registerItem("light_gray_brick", new QueerBrickItem());
+		darkBlueBrick = registerItem("blue_brick", new QueerBrickItem());
 		lightBlueBrick = registerItem("light_blue_brick", new QueerBrickItem());
-		darkRedBrick = registerItem("dark_red_brick", new QueerBrickItem());
-		lightRedBrick = registerItem("light_red_brick", new QueerBrickItem());
-		darkGreenBrick = registerItem("dark_green_brick", new QueerBrickItem());
-		lightGreenBrick = registerItem("light_green_brick", new QueerBrickItem());
-		darkPurpleBrick = registerItem("dark_purple_brick", new QueerBrickItem());
-		lightPurpleBrick = registerItem("light_purple_brick", new QueerBrickItem());
+		darkRedBrick = registerItem("red_brick", new QueerBrickItem());
+		lightRedBrick = registerItem("pink_brick", new QueerBrickItem());
+		darkGreenBrick = registerItem("green_brick", new QueerBrickItem());
+		lightGreenBrick = registerItem("lime_brick", new QueerBrickItem());
+		darkPurpleBrick = registerItem("purple_brick", new QueerBrickItem());
+		lightPurpleBrick = registerItem("magenta_brick", new QueerBrickItem());
 		darkBrownBrick = registerItem("brown_brick", new QueerBrickItem());
 		yellowBrick = registerItem("yellow_brick", new QueerBrickItem());
 		cyanBrick = registerItem("cyan_brick", new QueerBrickItem());
