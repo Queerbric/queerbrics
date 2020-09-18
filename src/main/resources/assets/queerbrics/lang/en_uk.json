@@ -15,7 +15,7 @@
 	"item.queerbrics.cyan_brick" : "Cyan Brick",
 	"item.queerbrics.brown_brick" : "Brown Brick",
 	"item.queerbrics.yellow_brick" : "Yellow Brick",
-	
+
 	"item.queerbrics.ace_brick" : "Ace Pride Brick",
 	"item.queerbrics.anarchy_brick" : "Anarchy Pride Brick",
 	"item.queerbrics.bi_brick" : "Bi Pride Brick",
@@ -24,5 +24,8 @@
 	"item.queerbrics.lesbian_brick" : "Lesbian Pride Brick",
 	"item.queerbrics.pan_brick" : "Pan Pride Brick",
 	"item.queerbrics.rainbow_brick" : "Rainbow Brick",
-	"item.queerbrics.trans_brick" : "Trans Pride Brick"
+	"item.queerbrics.trans_brick" : "Trans Pride Brick",
+
+	"sound.queerbrics.brick.hit.living": "*thonk*",
+	"sound.queerbrics.brick.throw": "throws bric"
 }

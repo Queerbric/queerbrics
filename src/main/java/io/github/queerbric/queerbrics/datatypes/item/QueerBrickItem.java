@@ -1,13 +1,13 @@
 package io.github.queerbric.queerbrics.datatypes.item;
 
 import io.github.queerbric.queerbrics.datatypes.entity.ThrowableBrickEntity;
+import io.github.queerbric.queerbrics.registry.QueerbricsSoundEvents;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SnowballItem;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
@@ -20,7 +20,7 @@ public class QueerBrickItem extends SnowballItem {
 	@Override
 	public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
 		ItemStack itemStack = user.getStackInHand(hand);
-		world.playSound((PlayerEntity)null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_SNOWBALL_THROW, SoundCategory.NEUTRAL, 0.5F, 0.4F / (RANDOM.nextFloat() * 0.4F + 0.8F));
+		world.playSound(null, user.getX(), user.getY(), user.getZ(), QueerbricsSoundEvents.brickThrow, SoundCategory.NEUTRAL, 1.2F, 0.7f);
 		if (!world.isClient) {
 			ThrowableBrickEntity throwableBrickEntity = new ThrowableBrickEntity(world, user);
 			throwableBrickEntity.setItem(itemStack);
