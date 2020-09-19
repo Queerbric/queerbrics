@@ -26,6 +26,7 @@ public class QueerBrickItem extends SnowballItem {
 			throwableBrickEntity.setItem(itemStack);
 			throwableBrickEntity.setProperties(user, user.pitch, user.yaw, 0.0F, 1.5F, 1.0F);
 			world.spawnEntity(throwableBrickEntity);
+			itemStack.decrement(1);
 		}
 
 		return TypedActionResult.method_29237(itemStack, world.isClient());

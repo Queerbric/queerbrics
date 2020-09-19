@@ -76,6 +76,10 @@ public class ThrowableBrickEntity extends ThrownItemEntity {
 	@Override
 	protected void onCollision(HitResult hitResult) {
 		super.onCollision(hitResult);
+		if (!this.world.isClient) {
+			this.world.sendEntityStatus(this, (byte) 3);
+			this.remove();
+		}
 	}
 
 	// Don't make thrown brics disappear
