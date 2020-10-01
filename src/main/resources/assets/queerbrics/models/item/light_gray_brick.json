@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "queerbrics:item/brick/light_grey"
+    "layer0": "queerbrics:item/brick/light_gray"
   }
 }
