@@ -1,5 +1,7 @@
 package io.github.queerbric.queerbrics.datatypes.entity;
 
+import java.util.List;
+
 import io.github.queerbric.queerbrics.registry.QueerbricsEntityTypes;
 import io.github.queerbric.queerbrics.registry.QueerbricsItems;
 import io.github.queerbric.queerbrics.registry.QueerbricsSoundEvents;
@@ -9,7 +11,9 @@ import net.minecraft.block.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.ai.brain.MemoryModuleType;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.mob.PiglinEntity;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
 import net.minecraft.sound.SoundCategory;
@@ -17,6 +21,7 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
 
 public class ThrowableBrickEntity extends ThrownItemEntity {
@@ -77,6 +82,11 @@ public class ThrowableBrickEntity extends ThrownItemEntity {
 	protected void onCollision(HitResult hitResult) {
 		super.onCollision(hitResult);
 		if (!this.world.isClient) {
+			BlockPos pos = this.getBlockPos();
+			List<PiglinEntity> list = this.world.getEntities(EntityType.PIGLIN, new Box(pos).expand(8.0f), (PiglinEntity entity) -> true);
+			for (PiglinEntity entity : list) {
+				entity.getBrain().remember(MemoryModuleType.NEAREST_REPELLENT, pos);
+			}
 			this.world.sendEntityStatus(this, (byte) 3);
 			this.remove();
 		}
