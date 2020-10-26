@@ -43,14 +43,14 @@ public class QueerbricsItems {
 		cyanBrick = registerItem("cyan_brick", new QueerBrickItem());
 		orangeBrick = registerItem("orange_brick", new QueerBrickItem());
 		
-		rainbowBrick = registerItem("rainbow_brick", new QueerBrickItem());
-		transBrick = registerItem("trans_brick", new QueerBrickItem());
-		panBrick = registerItem("pan_brick", new QueerBrickItem());
-		gayBrick = registerItem("gay_brick", new QueerBrickItem());
-		enbyBrick = registerItem("enby_brick", new QueerBrickItem());
-		biBrick = registerItem("bi_brick", new QueerBrickItem());
-		lesbianBrick = registerItem("lesbian_brick", new QueerBrickItem());
-		anarchyBrick = registerItem("anarchy_brick", new QueerBrickItem());
+		rainbowBrick = registerItem("rainbow_brick", new QueerBrickItem("queerbrics:rainbow"));
+		transBrick = registerItem("trans_brick", new QueerBrickItem("queerbrics:trans"));
+		panBrick = registerItem("pan_brick", new QueerBrickItem("queerbrics:pan"));
+		gayBrick = registerItem("gay_brick", new QueerBrickItem("queerbrics:gay"));
+		enbyBrick = registerItem("enby_brick", new QueerBrickItem("queerbrics:enby"));
+		biBrick = registerItem("bi_brick", new QueerBrickItem("queerbrics:bi"));
+		lesbianBrick = registerItem("lesbian_brick", new QueerBrickItem("queerbrics:lesbian"));
+		anarchyBrick = registerItem("anarchy_brick", new QueerBrickItem("queerbrics:ancom"));
 //
 //		rainbowFabric = registerItem("rainbow_fabric", new QueerFabricItem(new Item.Settings()));
 //		transFabric = registerItem("trans_fabric", new QueerFabricItem(new Item.Settings()));

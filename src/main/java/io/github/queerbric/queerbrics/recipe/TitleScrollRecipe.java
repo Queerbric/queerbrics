@@ -31,7 +31,7 @@ public class TitleScrollRecipe extends SpecialCraftingRecipe {
 				if (Registry.ITEM.getKey(itemStack.getItem()).get().getValue().equals(new Identifier("titlescrolls", "title_scroll"))) {
 					++i;
 				} else {
-					if (!(itemStack.getItem() instanceof QueerBrickItem)) {
+					if (!(itemStack.getItem() instanceof QueerBrickItem) || ((QueerBrickItem) itemStack.getItem()).title.isEmpty()) {
 						return false;
 					}
 
@@ -65,25 +65,7 @@ public class TitleScrollRecipe extends SpecialCraftingRecipe {
 
 		ItemStack itemStack3 = new ItemStack(Registry.ITEM.get(new Identifier("titlescrolls", "uncommon_title_scroll")));
 		CompoundTag tag = new CompoundTag();
-		if (bricItem == QueerbricsItems.rainbowBrick) {
-			tag.putString("Title", "queerbrics:rainbow");
-		} else if (bricItem == QueerbricsItems.transBrick) {
-			tag.putString("Title", "queerbrics:trans");
-		} else if (bricItem == QueerbricsItems.panBrick) {
-			tag.putString("Title", "queerbrics:pan");
-		} else if (bricItem == QueerbricsItems.gayBrick) {
-			tag.putString("Title", "queerbrics:gay");
-		} else if (bricItem == QueerbricsItems.enbyBrick) {
-			tag.putString("Title", "queerbrics:enby");
-		} else if (bricItem == QueerbricsItems.biBrick) {
-			tag.putString("Title", "queerbrics:bi");
-		} else if (bricItem == QueerbricsItems.lesbianBrick) {
-			tag.putString("Title", "queerbrics:lesbian");
-		} else if (bricItem == QueerbricsItems.anarchyBrick) {
-			tag.putString("Title", "queerbrics:ancom");
-		} else {
-			tag.putString("Title", "queerbrics:rainbow");
-		}
+		tag.putString("Title", bricItem.title);
 		itemStack3.setTag(tag);
 
 		return itemStack3;
