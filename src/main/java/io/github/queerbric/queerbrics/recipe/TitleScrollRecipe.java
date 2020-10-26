@@ -31,7 +31,7 @@ public class TitleScrollRecipe extends SpecialCraftingRecipe {
 				if (Registry.ITEM.getKey(itemStack.getItem()).get().getValue().equals(new Identifier("titlescrolls", "title_scroll"))) {
 					++i;
 				} else {
-					if (!(itemStack.getItem() instanceof QueerBrickItem) || ((QueerBrickItem) itemStack.getItem()).title.isEmpty()) {
+					if (!(itemStack.getItem() instanceof QueerBrickItem) || ((QueerBrickItem) itemStack.getItem()).getTitle().isEmpty()) {
 						return false;
 					}
 
@@ -65,7 +65,7 @@ public class TitleScrollRecipe extends SpecialCraftingRecipe {
 
 		ItemStack itemStack3 = new ItemStack(Registry.ITEM.get(new Identifier("titlescrolls", "uncommon_title_scroll")));
 		CompoundTag tag = new CompoundTag();
-		tag.putString("Title", bricItem.title);
+		tag.putString("Title", bricItem.getTitle());
 		itemStack3.setTag(tag);
 
 		return itemStack3;

@@ -13,7 +13,7 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
 public class QueerBrickItem extends SnowballItem {
-	public String title;
+	private final String title;
 
 	public QueerBrickItem() {
 		this("");
@@ -22,6 +22,10 @@ public class QueerBrickItem extends SnowballItem {
 	public QueerBrickItem(String title) {
 		super(new Item.Settings().group(ItemGroup.MISC));
 		this.title = title;
+	}
+
+	public String getTitle() {
+		return title;
 	}
 
 	@Override
