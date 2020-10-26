@@ -2,6 +2,7 @@ package io.github.queerbric.queerbrics;
 
 import io.github.queerbric.queerbrics.registry.QueerbricsEntityTypes;
 import io.github.queerbric.queerbrics.registry.QueerbricsItems;
+import io.github.queerbric.queerbrics.registry.QueerbricsRecipeSerializers;
 import io.github.queerbric.queerbrics.registry.QueerbricsSoundEvents;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
@@ -19,5 +20,6 @@ public class QueerbricsMain implements ModInitializer {
 		QueerbricsSoundEvents.init();
 		QueerbricsEntityTypes.init();
 		QueerbricsItems.init();
+		QueerbricsRecipeSerializers.init();
 	}
 }
