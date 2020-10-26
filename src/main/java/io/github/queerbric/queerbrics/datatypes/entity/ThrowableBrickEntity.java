@@ -83,7 +83,7 @@ public class ThrowableBrickEntity extends ThrownItemEntity {
 		super.onCollision(hitResult);
 		if (!this.world.isClient) {
 			BlockPos pos = this.getBlockPos();
-			List<PiglinEntity> list = this.world.getEntities(EntityType.PIGLIN, new Box(pos).expand(8.0f), (PiglinEntity entity) -> true);
+			List<PiglinEntity> list = this.world.getEntitiesByType(EntityType.PIGLIN, new Box(pos).expand(8.0f), (PiglinEntity entity) -> true);
 			for (PiglinEntity entity : list) {
 				entity.getBrain().remember(MemoryModuleType.NEAREST_REPELLENT, pos);
 			}
