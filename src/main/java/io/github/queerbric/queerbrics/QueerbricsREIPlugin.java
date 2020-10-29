@@ -27,10 +27,11 @@ import net.minecraft.util.registry.Registry;
 
 @Environment(EnvType.CLIENT)
 public class QueerbricsREIPlugin implements REIPluginV0 {
+	private static String titleScrolls = "titlescrolls";
 	private static List<Pair<QueerBrickItem, EntryStack>> entries = new ArrayList<Pair<QueerBrickItem, EntryStack>>();
 
 	static {
-		if (FabricLoader.getInstance().isModLoaded("titlescrolls")) {
+		if (FabricLoader.getInstance().isModLoaded(titleScrolls)) {
 			addEntry(QueerbricsItems.rainbowBrick);
 			addEntry(QueerbricsItems.transBrick);
 			addEntry(QueerbricsItems.panBrick);
@@ -44,7 +45,7 @@ public class QueerbricsREIPlugin implements REIPluginV0 {
 
 	private static void addEntry(Item item) {
 		QueerBrickItem qItem = (QueerBrickItem) item;
-		ItemStack stack = new ItemStack(Registry.ITEM.get(new Identifier("titlescrolls:uncommon_title_scroll")), 1);
+		ItemStack stack = new ItemStack(Registry.ITEM.get(new Identifier(titleScrolls, "uncommon_title_scroll")), 1);
 		stack.putSubTag("Title", StringTag.of(qItem.getTitle()));
 		entries.add(Pair.of(qItem, EntryStack.create(stack)));
 	}
@@ -56,8 +57,8 @@ public class QueerbricsREIPlugin implements REIPluginV0 {
 
 	@Override
 	public void registerEntries(EntryRegistry entryRegistry) {
-		if (FabricLoader.getInstance().isModLoaded("titlescrolls")) {
-			EntryStack base = EntryStack.create(Registry.ITEM.get(new Identifier("titlescrolls:uncommon_title_scroll")));
+		if (FabricLoader.getInstance().isModLoaded(titleScrolls)) {
+			EntryStack base = EntryStack.create(Registry.ITEM.get(new Identifier(titleScrolls, "uncommon_title_scroll")));
 			for (Pair<QueerBrickItem, EntryStack> pair : entries) {
 				entryRegistry.registerEntriesAfter(base, pair.getSecond());
 			}
@@ -66,7 +67,7 @@ public class QueerbricsREIPlugin implements REIPluginV0 {
 
 	@Override
 	public void registerRecipeDisplays(RecipeHelper recipeHelper) {
-		if (FabricLoader.getInstance().isModLoaded("titlescrolls")) {
+		if (FabricLoader.getInstance().isModLoaded(titleScrolls)) {
 			for (Pair<QueerBrickItem, EntryStack> pair : entries) {
 				recipeHelper.registerDisplay(new ScrollRecipeDisplay(pair));
 			}
@@ -79,7 +80,7 @@ public class QueerbricsREIPlugin implements REIPluginV0 {
 
 		public ScrollRecipeDisplay(Pair<QueerBrickItem, EntryStack> pair) {
 			input.add(List.of(EntryStack.create(pair.getFirst())));
-			input.add(List.of(EntryStack.create(Registry.ITEM.get(new Identifier("titlescrolls:title_scroll")))));
+			input.add(List.of(EntryStack.create(Registry.ITEM.get(new Identifier(titleScrolls, "title_scroll")))));
 			result.add(List.of(pair.getSecond()));
 		}
 
