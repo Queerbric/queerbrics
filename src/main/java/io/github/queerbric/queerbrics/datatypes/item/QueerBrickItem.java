@@ -13,8 +13,19 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
 public class QueerBrickItem extends SnowballItem {
+	private final String title;
+
 	public QueerBrickItem() {
+		this("");
+	}
+
+	public QueerBrickItem(String title) {
 		super(new Item.Settings().group(ItemGroup.MISC));
+		this.title = title;
+	}
+
+	public String getTitle() {
+		return title;
 	}
 
 	@Override
