@@ -1,0 +1,25 @@
+{
+	"ribbon_color": "#810081",
+	"title_text": {
+		"text": "P",
+		"color": "#000000",
+		"extra": [
+			{
+				"text": "r",
+				"color": "#A4A4A4"
+			},
+			{
+				"text": "i",
+				"color": "#A4A4A4"
+			},
+			{
+				"text": "d",
+				"color": "#FFFFFF"
+			},
+			{
+				"text": "e",
+				"color": "#810081"
+			}
+		]
+	}
+}

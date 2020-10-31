@@ -23,6 +23,7 @@ public class QueerbricsItems {
 			enbyBrick, // Non-binary Pride
 			biBrick, // Bisexual Pride
 			lesbianBrick, // Lesbian Pride
+			aceBrick, // Asexual Pride
 			anarchyBrick; // Anarchist Pride
 	
 	public static void init() {
@@ -50,6 +51,7 @@ public class QueerbricsItems {
 		enbyBrick = registerItem("enby_brick", new QueerBrickItem("queerbrics:enby"));
 		biBrick = registerItem("bi_brick", new QueerBrickItem("queerbrics:bi"));
 		lesbianBrick = registerItem("lesbian_brick", new QueerBrickItem("queerbrics:lesbian"));
+		aceBrick = registerItem("ace_brick", new QueerBrickItem("queerbrics:ace"));
 		anarchyBrick = registerItem("anarchy_brick", new QueerBrickItem("queerbrics:ancom"));
 //
 //		rainbowFabric = registerItem("rainbow_fabric", new QueerFabricItem(new Item.Settings()));

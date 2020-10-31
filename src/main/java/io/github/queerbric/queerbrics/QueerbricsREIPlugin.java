@@ -39,6 +39,7 @@ public class QueerbricsREIPlugin implements REIPluginV0 {
 			addEntry(QueerbricsItems.enbyBrick);
 			addEntry(QueerbricsItems.biBrick);
 			addEntry(QueerbricsItems.lesbianBrick);
+			addEntry(QueerbricsItems.aceBrick);
 			addEntry(QueerbricsItems.anarchyBrick);
 		}
 	}
