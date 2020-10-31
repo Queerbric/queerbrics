@@ -23,6 +23,7 @@ Groups:
 * Non-Binary Pride
 * Bi Pride
 * Lesbian Pride
+* Ace Pride
 * Ancom Pride
 
 The items are named `<group> Brick`. A pride brick is crafted by adding one matching unicolor brick per "slice" to the crafting menu. The number of resulting pride bricks is equal to the number of consumed unicolor bricks.
